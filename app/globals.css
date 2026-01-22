@@ -71,6 +71,7 @@
   --animate-line1: line 3s linear infinite;
   --animate-line2: line 6s linear infinite;
   --animate-line3: line 9s linear infinite;
+  --animate-sticky-slide-down: sticky-slide-down 0.5s ease-in-out;
 
   @keyframes line {
     0%,
@@ -78,6 +79,15 @@
       transform: translateY(100%);
     }
     50% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes sticky-slide-down {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
       transform: translateY(0);
     }
   }

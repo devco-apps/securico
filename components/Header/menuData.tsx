@@ -5,75 +5,85 @@ const menuData: Menu[] = [
     id: 1,
     title: "Home",
     newTab: false,
-    path: "/",
+    submenu: [
+      {
+        id: 11,
+        title: "Home",
+        newTab: false,
+        path: "/",
+      },
+    ],
   },
   {
     id: 2,
-    title: "Features",
+    title: "Services",
     newTab: false,
-    path: "/#features",
-  },
-  {
-    id: 2.1,
-    title: "Blog",
-    newTab: false,
-    path: "/blog",
-  },
-  {
-    id: 2.3,
-    title: "Docs",
-    newTab: false,
-    path: "/docs",
+    submenu: [
+      {
+        id: 21,
+        title: "Services",
+        newTab: false,
+        path: "#",
+      },
+    ],
   },
   {
     id: 3,
-    title: "Pages",
+    title: "Portfolio",
     newTab: false,
     submenu: [
       {
         id: 31,
-        title: "Blog Grid",
+        title: "Portfolio",
         newTab: false,
-        path: "/blog",
-      },
-      {
-        id: 34,
-        title: "Sign In",
-        newTab: false,
-        path: "/auth/signin",
-      },
-      {
-        id: 35,
-        title: "Sign Up",
-        newTab: false,
-        path: "/auth/signup",
-      },
-      {
-        id: 35,
-        title: "Docs",
-        newTab: false,
-        path: "/docs",
-      },
-      {
-        id: 35.1,
-        title: "Support",
-        newTab: false,
-        path: "/support",
-      },
-      {
-        id: 36,
-        title: "404",
-        newTab: false,
-        path: "/error",
+        path: "#",
       },
     ],
   },
-
   {
     id: 4,
-    title: "Support",
+    title: "Pages",
     newTab: false,
-    path: "/support",
+    submenu: [
+      {
+        id: 41,
+        title: "Pages",
+        newTab: false,
+        path: "#",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "News",
+    newTab: false,
+    submenu: [
+      {
+        id: 51,
+        title: "News",
+        newTab: false,
+        path: "#",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Elements",
+    newTab: false,
+    submenu: [
+      {
+        id: 61,
+        title: "Elements",
+        newTab: false,
+        path: "#",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Contact Us",
+    newTab: false,
+    path: "#",
   },
 ];
 
