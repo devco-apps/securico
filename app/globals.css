@@ -151,6 +151,27 @@
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 29, 149, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 29, 149, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 29, 149, 0);
+  }
+}
+
 @layer base {
   body {
     @apply relative z-1 font-inter text-regular font-normal text-waterloo dark:text-manatee;

@@ -1,8 +1,12 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+
+import CTAButton from "@components/Buttons/CTAButton";
+
 import menuData from "./menuData";
 
 const Header = () => {
@@ -134,7 +138,7 @@ const Header = () => {
                   WhatsApp
                 </p>
                 <a href="https://wa.me/263786491684" className="text-xs text-body-color">
-                  +263 78 649 1684
+                  +263 786 491684
                 </a>
               </div>
             </div>
@@ -296,13 +300,9 @@ const Header = () => {
 
               {/* Right Side Actions */}
               <div className="mt-7 flex items-center gap-6 xl:mt-0">
-                {/* Contact Us Button */}
-                <Link
-                  href="#"
-                  className="hidden rounded-sm bg-[#FFD700] px-8 py-3 text-sm font-bold text-black transition-all hover:bg-opacity-90 xl:block"
-                >
-                  ENQUIRIES
-                </Link>
+                {/* Call to action button */}
+
+                <CTAButton>ENQUIRIES</CTAButton>
               </div>
             </div>
           </div>
