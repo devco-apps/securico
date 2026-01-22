@@ -25,8 +25,11 @@
     ],
     "paths": {
       "@/*": [
-        "./*"
+        "./*",
       ],
+      "@components/*": [
+        "./components/*"
+    ],
       "react": [
         "./node_modules/@types/react"
       ]
