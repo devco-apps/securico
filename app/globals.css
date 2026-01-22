@@ -18,10 +18,10 @@
   --color-white: #ffffff;
   --color-black: #181c31;
   --color-blackho: #2c3149;
-  --color-blacksection: #1c2136;
-  --color-primary: #006bff;
+  --color-secondary: #2B3D5A;
+  --color-primary: #00563F;
   --color-primaryho: #0063ec;
-  --color-meta: #20c5a8;
+  --color-accent: #66CCCC;
   --color-waterloo: #757693;
   --color-manatee: #999aa1;
   --color-alabaster: #fbfbfb;
@@ -187,7 +187,7 @@
 }
 
 .blog-details-docs {
-  @apply rounded-lg border border-white p-7.5 shadow-solid-3 transition-all dark:border-strokedark  dark:bg-blacksection xl:p-12.5;
+  @apply rounded-lg border border-white p-7.5 shadow-solid-3 transition-all dark:border-strokedark  dark:bg-secondary xl:p-12.5;
 }
 
 .blog-details p {

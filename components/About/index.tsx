@@ -77,7 +77,7 @@ const About = () => {
               </p>
 
               <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-secondary">
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">
                     01
                   </p>
@@ -90,7 +90,7 @@ const About = () => {
                 </div>
               </div>
               <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-secondary">
                   <p className="text-metatitle2 font-semibold text-black dark:text-white">
                     02
                   </p>

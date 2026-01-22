@@ -63,7 +63,7 @@ const Header = () => {
   return (
     <header className="z-99999 w-full">
       {/* Top Bar */}
-      <div className="hidden border-b border-stroke bg-white py-4 dark:border-strokedark dark:bg-blacksection xl:block">
+      <div className="hidden border-b border-stroke bg-white py-4 dark:border-strokedark dark:bg-secondary xl:block">
         <div className="mx-auto flex max-w-c-1390 items-center justify-between px-4 md:px-8 2xl:px-0">
           {/* Logo */}
           <div className="w-60">
@@ -177,7 +177,7 @@ const Header = () => {
       {/* Navigation Bar */}
       <div className="h-20">
         <div
-          className={`z-99999 w-full bg-white transition-all duration-300 dark:bg-blacksection ${stickyMenu
+          className={`z-99999 w-full bg-white transition-all duration-300 dark:bg-secondary ${stickyMenu
             ? "fixed left-0 top-0 animate-sticky-slide-down py-2 shadow-md"
             : "relative py-4"
             }`}
@@ -240,7 +240,7 @@ const Header = () => {
             {/* Nav Menu */}
             <div
               className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
-                "navbar visible! absolute top-full left-0 w-full bg-white p-7.5 shadow-solid-5 dark:bg-blacksection h-auto max-h-[calc(100vh-80px)] overflow-y-auto xl:static xl:h-auto xl:max-h-none xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+                "navbar visible! absolute top-full left-0 w-full bg-white p-7.5 shadow-solid-5 dark:bg-secondary h-auto max-h-[calc(100vh-80px)] overflow-y-auto xl:static xl:h-auto xl:max-h-none xl:p-0 xl:shadow-none xl:dark:bg-transparent"
                 }`}
             >
               <nav>
