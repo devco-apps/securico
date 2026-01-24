@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import MainSlider from "@/components/MainSlider";
 import Brands from "@/components/Brands";
 import Feature from "@/components/Features";
 import About from "@/components/About";
@@ -16,7 +15,6 @@ import Testimonial from "@/components/Testimonial";
 export default function Home() {
   return (
     <main className="relative min-h-screen select-none overflow-hidden text-white antialiased">
-      <MainSlider />
       <Hero />
       <Brands />
       <Feature />
