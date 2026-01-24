@@ -302,7 +302,7 @@ const Header = () => {
               <div className="mt-7 flex items-center gap-6 xl:mt-0">
                 {/* Call to action button */}
 
-                <CTAButton>ENQUIRIES</CTAButton>
+                <CTAButton>ENQUIRE NOW</CTAButton>
               </div>
             </div>
           </div>
