@@ -61,9 +61,9 @@ const Header = () => {
   };
 
   return (
-    <header className="z-99999 w-full">
+    <header className="absolute z-99999 w-full">
       {/* Top Bar */}
-      <div className="hidden border-b border-stroke bg-white py-4 dark:border-strokedark dark:bg-secondary xl:block">
+      <div className="hidden border-b border-stroke py-4 dark:border-strokedark dark:bg-secondary xl:block">
         <div className="mx-auto flex max-w-c-1390 items-center justify-between px-4 md:px-8 2xl:px-0">
           {/* Logo */}
           <div className="w-60">
@@ -76,10 +76,10 @@ const Header = () => {
                 className="hidden w-full dark:block"
               />
               <Image
-                src="/images/logo/logo-light.svg"
+                src="/images/logo/logo-light-1.webp"
                 alt="logo"
-                width={190}
-                height={40}
+                width={409.7}
+                height={103.6}
                 className="w-full dark:hidden"
               />
             </Link>
@@ -96,7 +96,7 @@ const Header = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="h-8 w-8 text-[#212b36] dark:text-white"
+                  className="h-8 w-8 text-white dark:text-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -106,10 +106,10 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-bold text-[#212b36] dark:text-white">
+                <p className="text-sm font-bold text-white dark:text-white">
                   Mail Us
                 </p>
-                <a href="mailto:info@securico.co.zw" className="text-xs text-body-color">
+                <a href="mailto:info@securico.co.zw" className="text-xs text-white">
                   info@securico.co.zw
                 </a>
               </div>
@@ -124,7 +124,7 @@ const Header = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="h-8 w-8 text-[#212b36] dark:text-white"
+                  className="h-8 w-8 text-white dark:text-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -134,10 +134,10 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-bold text-[#212b36] dark:text-white">
+                <p className="text-sm font-bold text-white dark:text-white">
                   WhatsApp
                 </p>
-                <a href="https://wa.me/263786491684" className="text-xs text-body-color">
+                <a href="https://wa.me/263786491684" className="text-xs text-white">
                   +263 786 491684
                 </a>
               </div>
@@ -145,14 +145,14 @@ const Header = () => {
 
             {/* Phone */}
             <div className="flex items-center gap-4">
-              <div className="text-primary">
+              <div className="text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="h-8 w-8 text-[#212b36] dark:text-white"
+                  className="h-8 w-8 text-white dark:text-white"
                 >
                   <path
                     strokeLinecap="round"
@@ -162,10 +162,10 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-bold text-[#212b36] dark:text-white">
+                <p className="text-sm font-bold text-white dark:text-white">
                   Call Us Today
                 </p>
-                <a href="tel:+263242621956" className="text-xs text-body-color">
+                <a href="tel:+263242621956" className="text-xs text-white">
                   +263 242 621956/7
                 </a>
               </div>
@@ -177,7 +177,7 @@ const Header = () => {
       {/* Navigation Bar */}
       <div className="h-20">
         <div
-          className={`z-99999 w-full bg-white transition-all duration-300 dark:bg-secondary ${stickyMenu
+          className={`z-99999 w-full  transition-all duration-300 dark:bg-secondary ${stickyMenu
             ? "fixed left-0 top-0 animate-sticky-slide-down py-2 shadow-md"
             : "relative py-4"
             }`}
@@ -254,7 +254,7 @@ const Header = () => {
                         <>
                           <button
                             onClick={() => handleSubmenu(key)}
-                            className="flex cursor-pointer items-center justify-between gap-3 font-bold text-[#64748b] hover:text-primary dark:text-white dark:hover:text-primary"
+                            className="flex cursor-pointer items-center justify-between gap-3 font-bold text-[#fbfbfb] hover:text-primary dark:text-white dark:hover:text-primary"
                             aria-expanded={openIndex === key}
                             aria-haspopup="true"
                           >
@@ -287,7 +287,7 @@ const Header = () => {
                           className={
                             pathUrl === menuItem.path
                               ? "font-bold text-primary hover:text-primary"
-                              : "font-bold text-[#64748b] hover:text-primary dark:text-white dark:hover:text-primary"
+                              : "font-bold text-[#fbfbfb] hover:text-primary dark:text-white dark:hover:text-primary"
                           }
                         >
                           {menuItem.title}
