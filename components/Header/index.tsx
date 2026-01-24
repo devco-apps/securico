@@ -63,7 +63,7 @@ const Header = () => {
   return (
     <header className="absolute z-99999 w-full">
       {/* Top Bar */}
-      <div className="hidden border-b border-stroke py-4 dark:border-strokedark dark:bg-secondary xl:block">
+      <div className="hidden border-stroke py-4 dark:border-strokedark xl:block">
         <div className="mx-auto flex max-w-c-1390 items-center justify-between px-4 md:px-8 2xl:px-0">
           {/* Logo */}
           <div className="w-60">
@@ -177,11 +177,10 @@ const Header = () => {
       {/* Navigation Bar */}
       <div className="h-20">
         <div
-          className={`z-99999 w-full  transition-all duration-300 dark:bg-secondary ${stickyMenu
+          className={`z-99999 w-full bg-[rgba(0,86,63,0.7)] transition-all duration-300 ${stickyMenu
             ? "fixed left-0 top-0 animate-sticky-slide-down py-2 shadow-md"
             : "relative py-4"
-            }`}
-        >
+            }`}        >
           <div className="relative mx-auto flex max-w-c-1390 items-center justify-between px-4 md:px-8 2xl:px-0">
             {/* Mobile Logo (Visible only on mobile) */}
             <div className="block w-full xl:hidden">
@@ -245,56 +244,61 @@ const Header = () => {
             >
               <nav>
                 <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
-                  {menuData.map((menuItem, key) => (
-                    <li
-                      key={key}
-                      className={menuItem.submenu && "group relative"}
-                    >
-                      {menuItem.submenu ? (
-                        <>
-                          <button
-                            onClick={() => handleSubmenu(key)}
-                            className="flex cursor-pointer items-center justify-between gap-3 font-bold text-[#fbfbfb] hover:text-primary dark:text-white dark:hover:text-primary"
-                            aria-expanded={openIndex === key}
-                            aria-haspopup="true"
+                  {menuData.map((menuItem, key) => {
+                    const isActive = pathUrl === menuItem.path;
+
+                    return (
+                      <li
+                        key={key}
+                        className={menuItem.submenu && "group relative"}
+                      >
+                        {menuItem.submenu ? (
+                          <>
+                            <button
+                              onClick={() => handleSubmenu(key)}
+                              className="flex cursor-pointer items-center justify-between gap-3 font-bold text-white hover:text-sticky-menu-background"
+                              aria-expanded={openIndex === key}
+                              aria-haspopup="true"
+                            >
+                              {menuItem.title}
+                              <span>
+                                <svg
+                                  className="h-3 w-3 cursor-pointer fill-current"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 512 512"
+                                >
+                                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                                </svg>
+                              </span>
+                            </button>
+
+                            <ul
+                              className={`dropdown ${openIndex === key ? "flex" : ""
+                                } xl:group-focus-within:visible xl:group-focus-within:opacity-100 xl:group-focus-within:translate-y-6.5`}
+                            >
+                              {menuItem.submenu.map((item, key) => (
+                                <li key={key} className="hover:text-sticky-menu-background">
+                                  <Link href={item.path || "#"}>
+                                    {item.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <Link
+                            href={`${menuItem.path}`}
+                            className={`px-4 py-2 font-bold hover:text-sticky-menu-background ${isActive
+                              ? "text-sticky-menu-background "
+                              : "text-white"
+                              }`}
                           >
                             {menuItem.title}
-                            <span>
-                              <svg
-                                className="h-3 w-3 cursor-pointer fill-current"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"
-                              >
-                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-                              </svg>
-                            </span>
-                          </button>
-
-                          <ul
-                            className={`dropdown ${openIndex === key ? "flex" : ""
-                              } xl:group-focus-within:visible xl:group-focus-within:opacity-100 xl:group-focus-within:translate-y-6.5`}
-                          >
-                            {menuItem.submenu.map((item, key) => (
-                              <li key={key} className="hover:text-primary">
-                                <Link href={item.path || "#"}>{item.title}</Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </>
-                      ) : (
-                        <Link
-                          href={`${menuItem.path}`}
-                          className={
-                            pathUrl === menuItem.path
-                              ? "font-bold text-primary hover:text-primary"
-                              : "font-bold text-[#fbfbfb] hover:text-primary dark:text-white dark:hover:text-primary"
-                          }
-                        >
-                          {menuItem.title}
-                        </Link>
-                      )}
-                    </li>
-                  ))}
+                          </Link>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </nav>
 
