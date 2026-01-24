@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 import { Squada_One } from 'next/font/google'
 import { AnimatePresence } from 'framer-motion'
@@ -25,8 +25,39 @@ const MainSlider = () => {
         index: 0
     })
 
+    const handleSlideChange = useCallback((index: number) => {
+        if (index < 0 || index >= sliderData.length) return;
+
+        setCurrentSlideData({
+            data: sliderData[index],
+            index: index,
+        });
+
+        setTransitionData(sliderData[index]);
+        setData(sliderData.filter((_, i) => i !== index));
+    }, []);
+
+    const handleNext = useCallback(() => {
+        const nextIndex = (currentSlideData.index + 1) % sliderData.length;
+        handleSlideChange(nextIndex);
+    }, [currentSlideData.index, handleSlideChange]);
+
+    const handlePrev = useCallback(() => {
+        const prevIndex = (currentSlideData.index - 1 + sliderData.length) % sliderData.length;
+        handleSlideChange(prevIndex);
+    }, [currentSlideData.index, handleSlideChange]);
+
+    useEffect(() => {
+        const interval = setInterval(handleNext, 8000);
+
+        return () => clearInterval(interval);
+    }, [handleNext]);
+
+
     return (
-        <section className={`${inter.className} relative min-h-screen select-none overflow-hidden text-white antialiased`}>
+        <section
+            className={`${inter.className} relative min-h-screen select-none overflow-hidden text-white antialiased`}
+        >
             <AnimatePresence>
                 <BackgroundImage
                     transitionData={transitionData}
@@ -53,13 +84,9 @@ const MainSlider = () => {
 
                             <Controls
                                 currentSlideData={currentSlideData}
-                                data={data}
-                                transitionData={transitionData}
-                                initData={initData}
-                                handleData={setData}
-                                handleTransitionData={setTransitionData}
-                                handleCurrentSlideData={setCurrentSlideData}
                                 sliderData={sliderData}
+                                handlePrev={handlePrev}
+                                handleNext={handleNext}
                             />
                         </div>
                     </div>
