@@ -29,7 +29,10 @@
       ],
       "@components/*": [
         "./components/*"
-    ],
+      ],
+      "@data/*": [
+        "./data/*"
+      ],
       "react": [
         "./node_modules/@types/react"
       ]
