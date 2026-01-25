@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import SectionHeader from "../Common/Section";
+import SectionHeader from "../../Common/Section";
 
 const Pricing = () => {
   return (

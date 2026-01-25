@@ -1,16 +1,10 @@
-import Hero from "@/components/Hero";
-import Brands from "@/components/Brands";
-import Feature from "@/components/Features";
-import About from "@/components/About";
-import FeaturesTab from "@/components/FeaturesTab";
-import FunFact from "@/components/FunFact";
-import Integration from "@/components/Integration";
-import CTA from "@/components/CTA";
+import Hero from "@/components/Home/Hero";
+import Brands from "@/components/Home/Brands";
+import About from "@/components/Home/About";
 import FAQ from "@/components/FAQ";
-import Pricing from "@/components/Pricing";
-import Contact from "@/components/Contact";
+import Pricing from "@/components/Home/Pricing";
 import Blog from "@/components/Blog";
-import Testimonial from "@/components/Testimonial";
+import Testimonial from "@/components/Home/Testimonial";
 
 export default function Home() {
   return (
@@ -18,15 +12,8 @@ export default function Home() {
       <Hero />
       <About />
       <Brands />
-      <Feature />
-      <FeaturesTab />
-      <FunFact />
-      <Integration />
-      <CTA />
       <FAQ />
-      <Testimonial />
       <Pricing />
-      <Contact />
       <Blog />
     </main>
   );
