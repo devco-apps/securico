@@ -1,8 +1,6 @@
 import Hero from "@/components/Home/Hero";
 import Awards from "@/components/Home/Awards";
 import About from "@/components/Home/About";
-import FAQ from "@/components/FAQ";
-import Pricing from "@/components/Home/Pricing";
 import Blog from "@/components/Blog";
 import Services from "@/components/Home/Services";
 import Advantages from "@/components/Home/Advantages";
@@ -16,8 +14,6 @@ export default function Home() {
       <Services />
       <Advantages />
       <Awards />
-      <FAQ />
-      <Pricing />
       <Blog />
     </main>
   );
