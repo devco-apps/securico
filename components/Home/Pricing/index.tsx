@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import SectionHeader from "../../Common/Section";
+// import SectionHeader from "../../Common/Section";
 
 const Pricing = () => {
   return (
@@ -9,7 +9,7 @@ const Pricing = () => {
       <section className="overflow-hidden pb-20 pt-15 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
-          <div className="animate_top mx-auto text-center">
+          {/* <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
                 title: `PRICING PLANS`,
@@ -17,7 +17,7 @@ const Pricing = () => {
                 description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
               }}
             />
-          </div>
+          </div> */}
           {/* <!-- Section Title End --> */}
         </div>
 
