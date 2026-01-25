@@ -1,203 +1,147 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+// import Section from '../common/Section';
+import Section from '@components/Common/Section'
+import { IoIosArrowForward, IoIosCheckmarkCircle, IoIosLocate, IoIosMap, IoIosPin } from 'react-icons/io';
+import Link from 'next/link';
 const About = () => {
   return (
-    <>
-      {/* <!-- ===== About Start ===== --> */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
-        <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
-            >
+    <Section variant="contained" className="overflow-hidden" p="xl">
+      <div className="grid items-center gap-8 lg:grid-cols-2">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, x: -20 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="animate_left relative mx-auto lg:mr-0"
+        >
+          <div className="flex gap-6">
+            <div className="aspect-[550/720]">
               <Image
-                src="/images/about/about-light-01.png"
-                alt="About"
-                className="dark:hidden"
-                fill
+                src="/images/home/about-us.webp"
+                alt="About Us"
+                width={550}
+                height={720}
+              // layout="fill"
+              // className="object-cover"
               />
-              <Image
-                src="/images/about/about-dark-01.png"
-                alt="About"
-                className="hidden dark:block"
-                fill
-              />
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
 
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right md:w-1/2"
-            >
-              <span className="font-medium uppercase text-black dark:text-white">
-                <span className="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">
-                  New
-                </span>{" "}
-                SaaS Boilerplate for Next.js
-              </span>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                A Complete Solution for
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
-                  SaaS Startup
-                </span>
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
-              </p>
+            </div>
 
-              <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-secondary">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    01
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    React 18, Next.js 13 and TypeScript
-                  </h3>
-                  <p>Ut ultricies lacus non fermentum ultrices.</p>
-                </div>
-              </div>
-              <div className="mt-7.5 flex items-center gap-5">
-                <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-secondary">
-                  <p className="text-metatitle2 font-semibold text-black dark:text-white">
-                    02
-                  </p>
-                </div>
-                <div className="w-3/4">
-                  <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
-                    Fully Customizable
-                  </h3>
-                  <p>consectetur adipiscing elit fermentum ultricies.</p>
-                </div>
-              </div>
-            </motion.div>
+            <div className="mb-2 h-[180px] w-4 bg-primary" />
           </div>
-        </div>
-      </section>
-      {/* <!-- ===== About End ===== --> */}
 
-      {/* <!-- ===== About Two Start ===== --> */}
-      <section>
-        <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
+          <div className="absolute bottom-[-90px] right-0 z-10 p-4">
+            <div className="rounded-xs bg-primary p-4 text-white shadow-md border-5 border-white">
+              <div className="items-center">
+                <div className="flex flex-col pb-6 gap-3">
+                  <p className="font-semibold text-4xl">25+</p>
+                  <p className="text-sm">Years of Quality Service</p>
+                </div>
 
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left md:w-1/2"
-            >
-              <h4 className="font-medium uppercase text-black dark:text-white">
-                Launch Your SaaS Fast
-              </h4>
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Packed with All Essential {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Integrations
-                </span>
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
-              </p>
-              <div>
-                <a
-                  href="#"
-                  className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
-                >
-                  <span className="duration-300 group-hover:pr-2">
-                    Know More
-                  </span>
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="currentColor"
-                  >
-                    <path d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z" />
-                  </svg>
-                </a>
+                <div className="flex -space-x-2">
+                  <img
+                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
+                    src="https://randomuser.me/api/portraits/women/1.jpg"
+                    alt=""
+                  />
+                  <img
+                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
+                    src="https://randomuser.me/api/portraits/men/1.jpg"
+                    alt=""
+                  />
+                  <img
+                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
+                    src="https://randomuser.me/api/portraits/women/2.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
-            >
-              <Image
-                src="./images/about/about-light-02.svg"
-                alt="About"
-                className="dark:hidden"
-                fill
-              />
-              <Image
-                src="./images/about/about-dark-02.svg"
-                alt="About"
-                className="hidden dark:block"
-                fill
-              />
-            </motion.div>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* <!-- ===== About Two End ===== --> */}
-    </>
+        </motion.div>
+
+        <motion.div
+          variants={{
+            hidden: {
+              opacity: 0,
+              x: 20,
+            },
+            visible: {
+              opacity: 1,
+              x: 0,
+            },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="animate_right relative flex flex-col gap-8"
+        >
+          <p className='text-6xl font-bold text-primary'>Your Trusted Security Partner</p>
+
+          <p className='text-black'>
+            For over two decades, Securico has been Zimbabwe's leading security solutions provider, safeguarding businesses, homes and institutions.
+          </p>
+
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-3">
+              <IoIosArrowForward className='text-primary inline-block text-xl' />
+              <p className="text-black">Cutting-edge Technology</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <IoIosArrowForward className='text-primary inline-block text-xl' />
+              <p className="text-black">Highly Trained Personnel</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <IoIosArrowForward className='text-primary inline-block text-xl' />
+              <p className="text-black">Reliable &amp; Proactive Protection 24/7</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2">
+            <div className="rounded-lg bg-white p-6 shadow-md dark:bg-blacksection">
+              <div className="flex flex-col gap-2 justify-start">
+                <h3 className="text-lg p-0 m-0 font-semibold text-black dark:text-white">
+                  Corporate
+                </h3>
+                <p className="text-xs text-black dark:text-white">
+                  Learn about our company.
+                </p>
+                <Link href="#" className="text-primary hover:text-secondary text-xs">Read More</Link>
+              </div>
+            </div>
+            <div className="rounded-lg bg-white p-6 shadow-md dark:bg-blacksection">
+              <div className="flex flex-col gap-2 justify-start">
+                <h3 className="text-lg p-0 m-0 font-semibold text-black dark:text-white">
+                  Leadership
+                </h3>
+                <p className="text-xs text-black dark:text-white">
+                  The board directing the company.
+                </p>
+                <Link href="#" className="text-primary hover:text-secondary text-xs">Read More</Link>
+              </div>
+            </div>
+          </div>
+
+          <Link
+            href="#"
+            className="mt-10 flex w-fit items-center rounded-md bg-secondary px-5 py-3 text-white hover:bg-opacity-90"
+          >
+            <IoIosPin className='inline-block mr-2 text-xl' />
+            <p>View our locations</p>
+          </Link>
+        </motion.div>
+      </div>
+    </Section>
   );
 };
 

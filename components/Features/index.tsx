@@ -2,7 +2,7 @@
 import React from "react";
 import featuresData from "./featuresData";
 import SingleFeature from "./SingleFeature";
-import SectionHeader from "../Common/SectionHeader";
+import SectionHeader from "../Common/Section";
 
 const Feature = () => {
   return (

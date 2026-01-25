@@ -16,9 +16,9 @@ export default function Home() {
   return (
     <main className="relative min-h-screen select-none overflow-hidden text-white antialiased">
       <Hero />
+      <About />
       <Brands />
       <Feature />
-      <About />
       <FeaturesTab />
       <FunFact />
       <Integration />
