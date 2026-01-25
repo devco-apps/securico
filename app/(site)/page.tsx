@@ -1,5 +1,5 @@
 import Hero from "@/components/Home/Hero";
-import Brands from "@/components/Home/Brands";
+import Awards from "@/components/Home/Awards";
 import About from "@/components/Home/About";
 import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Home/Pricing";
@@ -15,7 +15,7 @@ export default function Home() {
       <About />
       <Services />
       <Advantages />
-      <Brands />
+      <Awards />
       <FAQ />
       <Pricing />
       <Blog />

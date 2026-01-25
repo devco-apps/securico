@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from "react";
+
 import Image from "next/image";
-import { Brand } from "@/types/brand";
 import { motion } from "framer-motion";
 
-const SingleBrand = ({ brand }: { brand: Brand }) => {
-  const { image, href, name, imageLight, id } = brand;
+import { Award } from "@/types/award";
+
+const SingleAward = ({ award }: { award: Award }) => {
+  const { image, href, name, imageLight, id } = award;
 
   return (
     <>
@@ -44,4 +46,4 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
   );
 };
 
-export default SingleBrand;
+export default SingleAward;
