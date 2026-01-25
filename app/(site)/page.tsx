@@ -5,6 +5,7 @@ import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Home/Pricing";
 import Blog from "@/components/Blog";
 import Services from "@/components/Home/Services";
+import Advantages from "@/components/Home/Advantages";
 // import Testimonial from "@/components/Home/Testimonial";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <Advantages />
       <Brands />
       <FAQ />
       <Pricing />
