@@ -152,9 +152,8 @@ const FooterLinks = () => {
                     <div className="flex gap-10">
                         <ul>
                             {usefulLinks1.map((link, i) => (
-                                <li>
+                                <li key={`${link.label} ${i}`}>
                                     <a
-                                        key={`${link.label} ${i}`}
                                         href="#"
                                         className="mb-3 inline-block hover:text-primary text-sm"
                                     >
@@ -166,9 +165,8 @@ const FooterLinks = () => {
 
                         <ul>
                             {usefulLinks2.map((link, i) => (
-                                <li>
+                                <li key={`${link.label} ${i}`}>
                                     <a
-                                        key={`${link.label} ${i}`}
                                         href="#"
                                         className="mb-3 inline-block hover:text-primary text-sm"
                                     >
