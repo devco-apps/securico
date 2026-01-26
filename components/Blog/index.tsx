@@ -1,32 +1,24 @@
-// import SectionHeader from "../Common/Section";
+import Section from '@components/Common/Section'
+
 import BlogItem from "./BlogItem";
 import BlogData from "./blogData";
 
 const Blog = async () => {
   return (
-    <section className="py-20 lg:py-25 xl:py-30">
-      <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-        {/* <!-- Section Title Start --> */}
-        {/* <div className="animate_top mx-auto text-center">
-          <SectionHeader
-            headerInfo={{
-              title: `NEWS & BLOGS`,
-              subtitle: `Latest News & Blogs`,
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
-            }}
-          />
-        </div> */}
-        {/* <!-- Section Title End --> */}
-      </div>
+    <Section className="py-20 lg:py-25 xl:py-30">
+      <div className="max-w-7xl mx-auto flex flex-col gap-20">
+        <div className="text-black">
+          <p className="text-xs mb-2 uppercase">Latest News</p>
+          <p className='text-6xl font-bold text-primary'>Recent news &amp; events</p>
+        </div>
 
-      <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
-        <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
           {BlogData.slice(0, 3).map((blog, key) => (
             <BlogItem blog={blog} key={key} />
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
