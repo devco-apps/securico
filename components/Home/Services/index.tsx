@@ -1,5 +1,6 @@
 "use client";
 
+import Section from '@/components/Common/Section';
 import { motion } from 'framer-motion';
 import { IoIosArrowForward } from 'react-icons/io';
 
@@ -48,9 +49,8 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-20 bg-gray-50 px-6">
+        <Section variant='wide' className="py-20 bg-gray-50 px-6">
             <div className="max-w-7xl mx-auto">
-                {/* Grid Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                     <div
                         className="group relative bg-primary text-white p-10 border border-gray-100 transition-all duration-300 h-[400px]"
@@ -113,6 +113,6 @@ export default function Services() {
                     ))}
                 </div>
             </div>
-        </section>
+        </Section>
     );
 }
