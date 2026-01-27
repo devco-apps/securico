@@ -24,7 +24,7 @@ const BlogData: Blog[] = [
   },
   {
     _id: 1,
-    mainImage: "/images/blog/blog-03.png",
+    mainImage: "/images/blog/blog-02.png",
     title: "Free advertising for your online business",
     metadata:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor.",
