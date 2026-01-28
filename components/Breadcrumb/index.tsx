@@ -27,7 +27,7 @@ const Breadcrumb = ({ title, backgroundImageSrc }: BreadcrumbProps) => {
 
     return (
         <div
-            className={`min-h-[25vh] xs:min-h-[30vh] sm:min-h-[40vh] md:min-h-[50vh] flex flex-col justify-end text-white py-4 bg-cover bg-center bg-gray-400`}
+            className={`min-h-[25vh] xs:min-h-[30vh] sm:min-h-[40vh] md:min-h-[50vh] flex flex-col justify-end text-white bg-cover bg-center bg-gray-400`}
             style={backgroundStyle}
         >
             <div className='bg-black/50 w-full h-full flex flex-col justify-end py-4'>
