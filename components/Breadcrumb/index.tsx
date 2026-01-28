@@ -3,7 +3,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { sitemap } from '@data/sitemap';
+import { breadcrumbs as data } from '@/data/breadcrumbs';
 import Section from '@components/Common/Section';
 
 interface BreadcrumbProps {
@@ -17,7 +17,7 @@ const Breadcrumb = ({ title, backgroundImageSrc }: BreadcrumbProps) => {
 
     const breadcrumbs = pathSegments.map((segment, index) => {
         const href = '/' + pathSegments.slice(0, index + 1).join('/');
-        const name = sitemap[href]?.name || segment.replace(/-/g, ' ');
+        const name = data[href]?.name || segment.replace(/-/g, ' ');
         return { name, href };
     });
 

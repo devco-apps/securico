@@ -1,7 +1,9 @@
 
-export const sitemap = {
+export const breadcrumbs = {
     '/': { name: 'Home' },
     '/about': { name: 'About Us' },
+    '/about/corporate': { name: 'Corporate', parent: '/about' },
+    '/about/leadership': { name: 'Leadership', parent: '/about' },
     '/services': { name: 'Services' },
     '/services/guard-services': { name: 'Guard Services', parent: '/services' },
     '/services/cash-in-transit': { name: 'Cash In Transit', parent: '/services' },
