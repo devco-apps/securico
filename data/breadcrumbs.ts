@@ -11,6 +11,7 @@ export const breadcrumbs = {
     '/services/rapid-response': { name: 'Rapid Response', parent: '/services' },
     '/services/risk-management': { name: 'Risk Management', parent: '/services' },
     '/services/secure-parking': { name: 'Secure Parking', parent: '/services' },
+    '/locations': { name: 'Locations' },
     '/contact': { name: 'Contact Us' },
 };
 
