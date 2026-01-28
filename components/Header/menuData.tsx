@@ -82,7 +82,7 @@ const menuData: Menu[] = [
       },
       {
         id: 43,
-        title: "Tenders",
+        title: "Tenders 🔒",
         newTab: false,
         path: "/resources/tenders",
       },
