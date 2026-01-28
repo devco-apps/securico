@@ -5,9 +5,34 @@ import Section from "@components/Common/Section"
 import SingleAward from "./SingleAward"
 import awardData from "./awardData"
 
-const Awards = () => {
+type BackgroundColor = "white" | "primary" | "secondary" | "accent";
+
+interface AwardsProps {
+  backgroundColor?: BackgroundColor;
+}
+
+const Awards = ({ backgroundColor = "white" }: AwardsProps) => {
+  // Runtime validation for development
+  if (process.env.NODE_ENV !== 'production') {
+    const allowed = ["white", "primary", "secondary", "accent"];
+
+    if (!allowed.includes(backgroundColor)) {
+      console.warn(`[Awards Component]: Invalid backgroundColor "${backgroundColor}". Allowed values are: ${allowed.join(", ")}.`);
+    }
+  }
+
+  // Map colors to classes
+  const colorClasses: Record<BackgroundColor, string> = {
+    white: "bg-white",
+    primary: "bg-primary",
+    secondary: "bg-secondary",
+    accent: "bg-accent",
+  };
+
+  const bgClass = colorClasses[backgroundColor] || "bg-white";
+
   return (
-    <Section variant="wide" className="bg-secondary py-11 dark:bg-primary">
+    <Section variant="wide" className={`${bgClass} py-11`}>
       <div className="text-center text-gray-400">
         <h2 className="mb-4 text-2xl font-bold sm:text-4xl">
           Our Achievements & Awards

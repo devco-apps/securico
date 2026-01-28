@@ -1,5 +1,5 @@
 import Hero from "@/components/Home/Hero";
-import Awards from "@/components/Home/Awards";
+import Awards from "@/components/Awards";
 import About from "@/components/Home/About";
 import Blog from "@/components/Blog";
 import Services from "@/components/Home/Services";
@@ -13,7 +13,7 @@ export default function Home() {
       <About />
       <Services />
       <Advantages />
-      <Awards />
+      <Awards backgroundColor="secondary" />
       <Blog />
     </main>
   );

@@ -3,7 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Introduction from "./features/Introduction";
 import Vision from "./features/Vision";
 import History from "./features/History";
-import Awards from "@/components/Home/Awards";
+import Awards from "@/components/Awards";
 import Resources from "./features/Resources";
 
 const CorporatePage = () => {
@@ -13,7 +13,7 @@ const CorporatePage = () => {
       <Introduction />
       <Vision />
       <History />
-      <Awards />
+      <Awards backgroundColor="secondary" />
       <Resources />
     </div>
   );

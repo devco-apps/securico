@@ -1,43 +1,56 @@
 import Breadcrumb from "@/components/Breadcrumb";
+import Section from "@/components/Common/Section";
+import Awards from "@/components/Awards";
+
+import TeamCard from "./TeamCard";
 
 const LeadershipPage = () => {
-  const leadershipTeam = [
+  const team = [
     {
-      name: "John Doe",
-      title: "Chief Executive Officer",
-      bio: "John has over 20 years of experience in the industry, leading our company to new heights with his strategic vision and passion for innovation.",
-      image: "https://randomuser.me/api/portraits/men/1.jpg"
+      name: "Dr Divine Simbi Ndhlukula",
+      title: "Founder, Managing Director",
+      bio: "Founder & Managing Director of SECURICO SECURITY SERVICES. A world renowned Business person who transformed the face of the Zimbabwean Security industry, infusing SECURICO with a wealth of business management knowledge and hands-on experience.",
+      image: "/images/about/leader-dr.webp"
     },
     {
-      name: "Jane Smith",
-      title: "Chief Technology Officer",
-      bio: "Jane is a technology enthusiast with a deep understanding of emerging trends. She is responsible for our company's technology strategy and roadmap.",
-      image: "https://randomuser.me/api/portraits/women/1.jpg"
+      name: "Gloria Zvaravanhu",
+      title: "Board Chairperson",
+      bio: "A Chartered Accountant with years of experience in financial management, 14 of which at Executive Management level. She holds a Bachelor of Accountancy degree from Rhodes University, South Africa, a Master in Business Leadership degree from the University of South Africa and an LLM degree in International Business Law from the University of Cumbria, UK. At continental level, she serves on the Pan African Federation of Accountants Board where she represents 15 countries in Southern Africa. At International Level, she serves on the business committee of the International Federation of Accountants.",
+      image: "/images/about/leader-bd.webp"
     },
-    {
-      name: "Peter Jones",
-      title: "Chief Operating Officer",
-      bio: "Peter ensures operational excellence across the company. His focus on efficiency and quality has been instrumental in our success.",
-      image: "https://randomuser.me/api/portraits/men/2.jpg"
-    }
   ];
 
   return (
     <div>
-      <Breadcrumb title="Leadership" />
+      <Breadcrumb title="Executive Leadership" />
       <div className="container mx-auto py-12">
-        <h1 className="text-4xl font-bold mb-8 text-center">Our Leadership Team</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {leadershipTeam.map((member, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center">
-              <img src={member.image} alt={member.name} className="w-32 h-32 rounded-full mx-auto mb-4" />
-              <h2 className="text-2xl font-semibold">{member.name}</h2>
-              <p className="text-primary mb-2">{member.title}</p>
-              <p>{member.bio}</p>
-            </div>
+        <div className="max-w-4xl mx-auto text-justify mb-16">
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            At SECURICO, our executive leadership is the cornerstone of our commitment to trust and security. Comprising dedicated professionals, our team serves as the guardians of your safety, leveraging deep expertise to deliver unwavering protection. We view our organization not merely as a workforce, but as a cohesive unit bound by a shared mission to safeguard what matters most.
+          </p>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Collaboration drives our excellence. We seamlessly blend diverse talents to engineer security solutions that set industry standards. Rooted in a culture of meritocracy, we recognize dedication and foster internal growth, ensuring that our leaders are as invested in our mission as they are experienced in their field. Every milestone we achieve is a step toward a safer world, fueled by a relentless drive to exceed expectations and inspire confidence.
+          </p>
+        </div>
+
+      </div>
+
+      <Section variant="wide" className="py-20 bg-gray-100 border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {team.map((member, index) => (
+            <TeamCard
+              key={index}
+              name={member.name}
+              role={member.title}
+              description={member.bio}
+              image={member.image}
+            />
           ))}
         </div>
-      </div>
+
+      </Section>
+
+      <Awards backgroundColor="white" />
     </div>
   );
 };
