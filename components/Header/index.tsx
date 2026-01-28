@@ -186,18 +186,11 @@ const Header = () => {
             <div className="block w-full xl:hidden">
               <Link href="/">
                 <Image
-                  src="/images/logo/logo-dark.svg"
-                  alt="logo"
-                  width={119.03}
-                  height={30}
-                  className="hidden w-full dark:block"
-                />
-                <Image
-                  src="/images/logo/logo-light.svg"
-                  alt="logo"
-                  width={119.03}
-                  height={30}
-                  className="w-full dark:hidden"
+                  width={300}
+                  height={40}
+                  src="/images/logo/logo-light-1.webp"
+                  alt="Logo"
+                // className="dark:hidden"
                 />
               </Link>
             </div>
