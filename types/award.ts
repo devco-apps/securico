@@ -3,5 +3,5 @@ export type Award = {
   name: string;
   href: string;
   image: string;
-  imageLight: string;
+  imageLight?: string;
 };
