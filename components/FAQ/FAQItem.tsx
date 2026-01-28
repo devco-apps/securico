@@ -4,6 +4,7 @@ type FaqData = {
   handleFaqToggle: (id: number) => void;
   quest: string;
   ans: string;
+  category?: string;
 };
 
 const FAQItem = ({ faqData }: { faqData: FaqData }) => {
@@ -48,13 +49,11 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
             </svg>
           )}
         </button>
-        <p
-          className={`border-t border-stroke px-6 py-5 dark:border-strokedark lg:px-9 lg:py-7.5 ${
-            activeFaq === id ? "block" : "hidden"
-          }`}
-        >
-          {ans}
-        </p>
+        <div
+          className={`border-t border-stroke px-6 py-5 dark:border-strokedark lg:px-9 lg:py-7.5 ${activeFaq === id ? "block" : "hidden"
+            }`}
+          dangerouslySetInnerHTML={{ __html: ans }}
+        />
       </div>
     </>
   );
