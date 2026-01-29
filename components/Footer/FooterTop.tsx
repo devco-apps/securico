@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Subscribe from "./Subscribe";
 
@@ -8,7 +9,7 @@ const FooterTop = () => {
 
     return (
         <div className="flex items-center justify-between border-b pt-16 pb-20">
-            <a href="/" className="relative">
+            <Link href="/" className="relative">
                 <Image
                     width={300}
                     height={40}
@@ -16,7 +17,7 @@ const FooterTop = () => {
                     alt="Logo"
                 // className="dark:hidden"
                 />
-            </a>
+            </Link>
 
             <Subscribe />
         </div>)

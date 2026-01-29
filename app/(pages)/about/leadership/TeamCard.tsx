@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io'
+import Image from 'next/image'
 // import { Linkedin, Twitter } from 'lucide-react'
 
 interface TeamMemberProps {
@@ -20,11 +21,14 @@ const TeamCard = ({ name, role, image, description }: TeamMemberProps) => {
             animate="rest"
         >
             {/* Profile Image */}
-            <img
-                src={image}
-                alt={name}
-                className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+            <div className="w-full h-[400px] relative">
+                <Image
+                    src={image}
+                    alt={name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+            </div>
 
             {/* Gradient Overlay for Readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

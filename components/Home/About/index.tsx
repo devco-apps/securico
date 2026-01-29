@@ -46,20 +46,26 @@ const About = () => {
                 </div>
 
                 <div className="flex -space-x-2">
-                  <img
+                  <Image
                     className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
                     src="https://randomuser.me/api/portraits/women/1.jpg"
                     alt=""
+                    width={32}
+                    height={32}
                   />
-                  <img
+                  <Image
                     className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
                     src="https://randomuser.me/api/portraits/men/1.jpg"
                     alt=""
+                    width={32}
+                    height={32}
                   />
-                  <img
+                  <Image
                     className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
                     src="https://randomuser.me/api/portraits/women/2.jpg"
                     alt=""
+                    width={32}
+                    height={32}
                   />
                 </div>
               </div>
