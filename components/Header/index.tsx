@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 import CTAButton from "@components/Buttons/CTAButton";
 
-import ThemeToggler from "./ThemeToggler";
+// import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
@@ -71,7 +71,7 @@ const Header = () => {
           <div className="w-60">
             <Link href="/">
               <Image
-                src="/images/logo/logo-dark.svg"
+                src="/images/logo/logo-light-1.webp"
                 alt="logo"
                 width={190}
                 height={40}
@@ -299,7 +299,7 @@ const Header = () => {
 
               {/* Right Side Actions */}
               <div className="mt-7 flex items-center gap-6 xl:mt-0">
-                <ThemeToggler />
+                {/* <ThemeToggler /> */}
                 {/* Call to action button */}
 
                 <CTAButton>Sign In</CTAButton>

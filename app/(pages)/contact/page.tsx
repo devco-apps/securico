@@ -39,7 +39,7 @@ const ContactPage = () => {
                                 Contact Us
                             </h2>
                             <p className="text-body-color dark:text-body-color-dark mb-6">
-                                Not sure what you need? The team at Securico will be happy to listen to you and suggest ideas you hadn't considered.
+                                Not sure what you need? The team at Securico will be happy to listen to you and suggest ideas you hadn&amp;t considered.
                             </p>
 
                             <div className="flex flex-col gap-6">
