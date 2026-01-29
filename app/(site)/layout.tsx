@@ -1,9 +1,15 @@
 import { Inter } from "next/font/google";
 import "../globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Provider from "./Provider";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title: "SECURICO Zimbabwe | 25+ Years of Quality & Professional Security Services",

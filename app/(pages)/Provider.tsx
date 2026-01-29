@@ -17,6 +17,7 @@ export default function ClientLayout({
             enableSystem={false}
             attribute="class"
             defaultTheme="light"
+            forcedTheme="light"
         >
             <Lines />
             <Header />
