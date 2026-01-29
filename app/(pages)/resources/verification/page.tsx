@@ -228,7 +228,7 @@ const VerificationPage = () => {
                                 </h3>
                                 <p className="text-sm text-body-color">
                                     No staff member found with the name or ID{" "}
-                                    <strong>"{query}"</strong>. Please check the spelling or try a
+                                    <strong>&quot;{query}&quot;</strong>. Please check the spelling or try a
                                     different search term.
                                 </p>
                             </motion.div>

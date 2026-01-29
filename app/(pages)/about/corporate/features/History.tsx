@@ -27,7 +27,7 @@ const History = () => {
                             With a modest budget, limited prior knowledge of the security sector, and an unwavering belief in the power of quality service, professionalism and exceptional organizational skills, SECURICO steadily gained traction.
                         </p>
                         <p>
-                            In 2002, SECURICO achieved a significant milestone by becoming the first indigenous security firm to offer asset/cash-in-transit services. This was followed in 2005 by the establishment of its subsidiary, CANINE Dog Services. A remarkable display of entrepreneurial acumen in 2008, amidst Zimbabwe's economic crisis, led to the acquisition of Multi-Link (Pvt) Ltd, an established electronic security systems company.
+                            In 2002, SECURICO achieved a significant milestone by becoming the first indigenous security firm to offer asset/cash-in-transit services. This was followed in 2005 by the establishment of its subsidiary, CANINE Dog Services. A remarkable display of entrepreneurial acumen in 2008, amidst Zimbabwe&apos;s economic crisis, led to the acquisition of Multi-Link (Pvt) Ltd, an established electronic security systems company.
                         </p>
                     </div>
                 </div>

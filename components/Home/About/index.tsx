@@ -87,7 +87,7 @@ const About = () => {
           <p className='text-6xl font-bold text-primary'>Your Trusted Security Partner</p>
 
           <p className='text-black'>
-            For over two decades, Securico has been Zimbabwe's leading security solutions provider, safeguarding businesses, homes and institutions.
+            For over two decades, Securico has been Zimbabwe&apos;s leading security solutions provider, safeguarding businesses, homes and institutions.
           </p>
 
           <div className="flex flex-col gap-2">

@@ -15,7 +15,7 @@ const Advantages = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                 <div className="flex flex-col justify-center group relative transition-all duration-300 text-secondary text-2xl">
                     <p className="font-bold" style={{ textAlign: "center" }}>
-                        We're your partners in safety. Our approach involves customizing solutions, blending on-site guards with cutting-edge technology, striking the perfect balance for enhanced security.
+                        We&apos;re your partners in safety. Our approach involves customizing solutions, blending on-site guards with cutting-edge technology, striking the perfect balance for enhanced security.
                     </p>
                 </div>
 

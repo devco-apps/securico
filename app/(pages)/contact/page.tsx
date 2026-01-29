@@ -119,7 +119,7 @@ const ContactPage = () => {
                                 Send us a message
                             </h3>
                             <p className="mb-6 text-sm text-body-color">
-                                We'd love to hear from you! Let's get in touch.
+                                We&apos;d love to hear from you! Let&apos;s get in touch.
                             </p>
 
                             {isSubmitted ? (

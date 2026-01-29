@@ -61,7 +61,7 @@ const FAQ = ({ faqData = defaultFaqData }: { faqData?: FAQType[] }) => {
                 Frequently asked questions
               </h2> */}
               <p className="mb-8 text-base text-primary">
-                Have questions? We're here to help.
+                Have questions? We&apos;re here to help.
               </p>
 
               {/* Search Bar */}

@@ -22,26 +22,26 @@ const TendersPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
+    const fetchTenders = async () => {
+      setIsLoading(true);
+      try {
+        const filters: TenderFilterOptions = {
+          searchQuery,
+          status: statusFilter,
+          deadline: deadlineFilter,
+        };
+        const data = await getTenders(filters);
+        setTenders(data);
+        setCurrentPage(1); // Reset to first page on filter change
+      } catch (error) {
+        console.error("Failed to fetch tenders:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
     fetchTenders();
   }, [searchQuery, statusFilter, deadlineFilter]);
-
-  const fetchTenders = async () => {
-    setIsLoading(true);
-    try {
-      const filters: TenderFilterOptions = {
-        searchQuery,
-        status: statusFilter,
-        deadline: deadlineFilter,
-      };
-      const data = await getTenders(filters);
-      setTenders(data);
-      setCurrentPage(1); // Reset to first page on filter change
-    } catch (error) {
-      console.error("Failed to fetch tenders:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   // Pagination Logic
   const totalPages = Math.ceil(tenders.length / ITEMS_PER_PAGE);
