@@ -1,6 +1,7 @@
 {
-  "name": "solid-nextjs",
-  "version": "1.3.2",
+  "name": "securico-fe",
+  "version": "0.1.0",
+  "description": "Securico Corporate Website",
   "private": true,
   "scripts": {
     "dev": "next dev",
