@@ -5,7 +5,7 @@ import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoXing, IoLogoYout
 
 import Heading from "./Heading";
 
-interface Link {
+export interface Link {
     path: string
     label: string
     icon?: ReactNode
@@ -65,7 +65,7 @@ const usefulLinks2: Link[] = [
     }
 ]
 
-const socialLinks: Link[] = [
+export const socialLinks: Link[] = [
     {
         label: "Facebook",
         path: 'https://www.facebook.com/securicozim',
