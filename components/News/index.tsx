@@ -9,7 +9,7 @@ const News = async () => {
       <div className="max-w-7xl mx-auto flex flex-col gap-20">
         <div className="text-black">
           <p className="text-xs mb-2 uppercase">Latest News</p>
-          <p className='text-6xl font-bold text-primary'>Recent news &amp; events</p>
+          <p className='text-3xl font-bold text-primary md:text-4xl lg:text-6xl'>Recent news &amp; events</p>
         </div>
 
         <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">

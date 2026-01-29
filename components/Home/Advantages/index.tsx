@@ -9,7 +9,7 @@ const Advantages = () => {
     return (
         <Section>
             <div className="p-10 flex justify-center">
-                <p className='text-6xl font-bold text-primary'>Our Advantage</p>
+                <p className='text-3xl font-bold text-primary md:text-4xl lg:text-6xl'>Our Advantage</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
@@ -25,6 +25,7 @@ const Advantages = () => {
                         alt="Guard Salute"
                         width={512}
                         height={512}
+                        className="w-full h-auto"
                     />
                 </div>
 

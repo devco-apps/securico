@@ -8,7 +8,7 @@ import { IoIosArrowForward, IoIosCheckmarkCircle, IoIosLocate, IoIosMap, IoIosPi
 import Link from 'next/link';
 const About = () => {
   return (
-    <Section variant="contained" className="overflow-hidden" p="xl">
+    <Section variant="contained" className="overflow-visible" p="xl">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <motion.div
           variants={{
@@ -37,12 +37,12 @@ const About = () => {
             <div className="mb-2 h-[180px] w-4 bg-primary" />
           </div>
 
-          <div className="absolute bottom-[-90px] right-0 z-10 p-4">
+          <div className="absolute -bottom-12 right-0 z-10 p-4 md:-bottom-16 lg:-bottom-[90px]">
             <div className="rounded-xs bg-primary p-4 text-white shadow-md border-5 border-white">
               <div className="items-center">
                 <div className="flex flex-col pb-6 gap-3">
-                  <p className="font-semibold text-4xl">25+</p>
-                  <p className="text-sm">Years of Quality Service</p>
+                  <p className="font-semibold text-3xl md:text-4xl">25+</p>
+                  <p className="text-xs md:text-sm">Years of Quality Service</p>
                 </div>
 
                 <div className="flex -space-x-2">
@@ -90,7 +90,7 @@ const About = () => {
           viewport={{ once: true }}
           className="animate_right relative flex flex-col gap-8"
         >
-          <p className='text-6xl font-bold text-primary'>Your Trusted Security Partner</p>
+          <p className='text-3xl font-bold text-primary md:text-4xl lg:text-6xl'>Your Trusted Security Partner</p>
 
           <p className='text-black'>
             For over two decades, Securico has been Zimbabwe&apos;s leading security solutions provider, safeguarding businesses, homes and institutions.

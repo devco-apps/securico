@@ -69,7 +69,7 @@ const MainSlider = () => {
 
                     <div className="flex h-full w-full grid-cols-10 flex-col md:grid">
                         {/* Slider Left Section Content */}
-                        <div className="col-span-4 mb-3 flex h-full flex-1 flex-col justify-end px-5 md:mb-0 md:justify-center md:px-10 sm:pt-60">
+                        <div className="col-span-4 mb-3 flex h-full flex-1 flex-col justify-end px-5 pt-28 sm:pt-32 md:mb-0 md:justify-center md:pt-0 md:px-10">
                             <SlideInfo
                                 transitionData={transitionData}
                                 currentSlideData={currentSlideData}
@@ -77,7 +77,7 @@ const MainSlider = () => {
                         </div>
 
                         {/* Slider Right Section Content */}
-                        <div className="col-span-6 flex h-full flex-1 flex-col justify-start p-4 md:justify-center md:p-10 md:pt-60">
+                        <div className="col-span-6 flex h-full flex-1 flex-col justify-start p-4 pt-10 md:justify-center md:p-10 md:pt-60">
                             <Slides
                                 data={data}
                             />

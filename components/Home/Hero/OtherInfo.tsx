@@ -16,7 +16,7 @@ const OtherInfo = ({ data }: Props) => {
                 data={data?.category}
             />
             <AnimatedText
-                className="my-1 text-4xl font-semibold md:my-3 md:text-8xl md:leading-[100px]"
+                className="my-1 text-3xl font-semibold md:my-3 md:text-4xl lg:text-8xl lg:leading-[100px]"
                 data={data?.title}
             />
             <AnimatedText

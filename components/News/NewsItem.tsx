@@ -22,9 +22,9 @@ const NewsItem = ({ news }: { news: News }) => {
       whileInView="visible"
       transition={{ duration: 1, delay: 0.5 }}
       viewport={{ once: true }}
-      className="animate_top rounded-lg bg-white text-black p-4 pb-9 shadow-solid-8 dark:bg-secondary"
+      className="animate_top relative rounded-lg bg-white text-black p-4 pb-9 shadow-solid-8 dark:bg-secondary"
     >
-      <div className="absolute z-10 bg-primary text-white uppercase">
+      <div className="absolute left-4 top-4 z-10 bg-primary text-white uppercase">
         <div className="w-14" style={{ textAlign: "center" }}>
           <div className="p-1">
             <p className="text-3xl font-bold">09</p>

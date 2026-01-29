@@ -44,7 +44,7 @@ const Awards = ({ backgroundColor = "white" }: AwardsProps) => {
       </div>
 
       <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
-        <div className="grid grid-cols-3 items-center justify-center gap-7.5 md:grid-cols-6 lg:gap-1.5 xl:gap-6">
+        <div className="grid grid-cols-2 items-center justify-center gap-7.5 md:grid-cols-6 lg:gap-1.5 xl:gap-6">
           {awardData.map((award, key) => (
             <SingleAward award={award} key={key} />
           ))}
