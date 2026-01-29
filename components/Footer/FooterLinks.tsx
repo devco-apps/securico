@@ -149,7 +149,7 @@ const FooterLinks = () => {
                 >
                     <Heading text="Useful Links" className="mb-9" />
 
-                    <div className="flex gap-10">
+                    <div className="flex gap-18">
                         <ul>
                             {usefulLinks1.map((link, i) => (
                                 <li key={`${link.label} ${i}`}>
