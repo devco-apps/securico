@@ -188,7 +188,7 @@ const Header = () => {
             <div className="block w-full xl:hidden">
               <Link href="/">
                 <Image
-                  width={300}
+                  width={190}
                   height={40}
                   src="/images/logo/logo-light-1.webp"
                   alt="Logo"
@@ -206,25 +206,25 @@ const Header = () => {
               <span className="relative block h-5.5 w-5.5 cursor-pointer">
                 <span className="absolute right-0 block h-full w-full">
                   <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-0 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "w-full! delay-300" : "w-0"
+                    className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white delay-0 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "w-full! delay-300" : "w-0"
                       }`}
                   ></span>
                   <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "delay-400 w-full!" : "w-0"
+                    className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white delay-150 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "delay-400 w-full!" : "w-0"
                       }`}
                   ></span>
                   <span
-                    className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "w-full! delay-500" : "w-0"
+                    className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-white delay-200 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "w-full! delay-500" : "w-0"
                       }`}
                   ></span>
                 </span>
                 <span className="du-block absolute right-0 h-full w-full rotate-45">
                   <span
-                    className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "h-0! delay-0" : "h-full"
+                    className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-white delay-300 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "h-0! delay-0" : "h-full"
                       }`}
                   ></span>
                   <span
-                    className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "h-0! delay-200" : "h-0.5"
+                    className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-white duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "h-0! delay-200" : "h-0.5"
                       }`}
                   ></span>
                 </span>
@@ -234,7 +234,7 @@ const Header = () => {
             {/* Nav Menu */}
             <div
               className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
-                "navbar visible! absolute top-full left-0 w-full bg-white p-7.5 shadow-solid-5 dark:bg-secondary h-auto max-h-[calc(100vh-80px)] overflow-y-auto xl:static xl:h-auto xl:max-h-none xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+                "navbar visible! absolute top-16 left-0 w-full bg-primary p-7.5 shadow-solid-5 dark:bg-secondary h-[calc(100vh-80px)] overflow-y-auto xl:static xl:h-auto xl:max-h-none xl:p-0 xl:shadow-none xl:dark:bg-transparent"
                 }`}
             >
               <nav>
@@ -283,7 +283,7 @@ const Header = () => {
                         ) : (
                           <Link
                             href={`${menuItem.path}`}
-                            className={`px-4 py-2 font-bold hover:text-sticky-menu-background ${isActive
+                            className={`px-0 py-2 font-bold hover:text-sticky-menu-background ${isActive
                               ? "text-sticky-menu-background "
                               : "text-white"
                               }`}
