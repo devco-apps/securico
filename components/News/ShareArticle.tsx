@@ -1,4 +1,4 @@
-const SharePost = () => {
+const ShareArticle = () => {
   return (
     <>
       <div className="mt-11 flex flex-wrap gap-4 md:items-center md:justify-between md:gap-0">
@@ -122,4 +122,4 @@ const SharePost = () => {
   );
 };
 
-export default SharePost;
+export default ShareArticle;

@@ -1,16 +1,16 @@
-import RelatedPost from "@/components/Blog/RelatedPost";
-import SharePost from "@/components/Blog/SharePost";
+import RelatedArticles from "@/components/News/RelatedArticles";
+import ShareArticle from "@/components/News/ShareArticle";
 import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Blog Details Page - Solid SaaS Boilerplate",
+  title: "Article Details Page - Solid SaaS Boilerplate",
 
   // other metadata
-  description: "This is Blog details page for Solid Pro"
+  description: "This is Article details page for Solid Pro"
 };
 
-const SingleBlogPage = async () => {
+const ArticlePage = async () => {
   return (
     <>
       <section className="pb-20 pt-35 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
@@ -55,7 +55,7 @@ const SingleBlogPage = async () => {
 
                 <ul>
                   <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Blog</a>
+                    <a href="#">Articles</a>
                   </li>
                   <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
                     <a href="#">Events</a>
@@ -72,7 +72,7 @@ const SingleBlogPage = async () => {
                 </ul>
               </div>
 
-              <RelatedPost />
+              <RelatedArticles />
             </div>
 
             <div className="lg:w-2/3">
@@ -80,7 +80,7 @@ const SingleBlogPage = async () => {
                 <div className="mb-10 w-full overflow-hidden ">
                   <div className="relative aspect-97/60 w-full sm:aspect-97/44">
                     <Image
-                      src={"/images/blog/blog-01.png"}
+                      src={"/images/news/news-01.png"}
                       alt="Kobe Steel plant that supplied"
                       fill
                       className="rounded-md object-cover object-center"
@@ -110,7 +110,7 @@ const SingleBlogPage = async () => {
                   </li>
                 </ul>
 
-                <div className="blog-details">
+                <div className="news-article">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nunc quis nibh lorem. Duis sed odio lorem. In a efficitur
@@ -133,13 +133,13 @@ const SingleBlogPage = async () => {
 
                   <div className="flex flex-wrap gap-5">
                     <Image
-                      src={"/images/blog/blog-01.png"}
+                      src={"/images/news/news-01.png"}
                       width={350}
                       height={200}
                       alt="image"
                     />
                     <Image
-                      src={"/images/blog/blog-02.png"}
+                      src={"/images/news/news-02.png"}
                       width={350}
                       height={200}
                       alt="image"
@@ -160,7 +160,7 @@ const SingleBlogPage = async () => {
                   </p>
                 </div>
 
-                <SharePost />
+                <ShareArticle />
               </div>
             </div>
           </div>
@@ -170,4 +170,4 @@ const SingleBlogPage = async () => {
   );
 };
 
-export default SingleBlogPage;
+export default ArticlePage;

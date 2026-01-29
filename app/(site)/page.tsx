@@ -1,7 +1,7 @@
 import Hero from "@/components/Home/Hero";
 import Awards from "@/components/Awards";
 import About from "@/components/Home/About";
-import Blog from "@/components/Blog";
+import News from "@/components/News";
 import Services from "@/components/Home/Services";
 import Advantages from "@/components/Home/Advantages";
 // import Testimonial from "@/components/Home/Testimonial";
@@ -14,7 +14,7 @@ export default function Home() {
       <Services />
       <Advantages />
       <Awards backgroundColor="secondary" />
-      <Blog />
+      <News />
     </main>
   );
 }

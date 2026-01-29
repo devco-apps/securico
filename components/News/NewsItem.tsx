@@ -1,6 +1,6 @@
 "use client";
 
-import { Blog } from "@/types/blog"
+import { News } from "@/types/news"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -9,8 +9,8 @@ import { motion } from "framer-motion"
 import { IoIosArrowForward } from 'react-icons/io';
 
 
-const BlogItem = ({ blog }: { blog: Blog }) => {
-  const { mainImage, title, metadata } = blog;
+const NewsItem = ({ news }: { news: News }) => {
+  const { mainImage, title, metadata } = news;
 
   return (
     <motion.div
@@ -36,13 +36,13 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
         </div>
       </div>
 
-      <Link href={`/blog/`} className="relative block aspect-368/239">
+      <Link href={`/news/articles`} className="relative block aspect-368/239">
         <Image src={mainImage} alt={title} fill />
       </Link>
 
       <div className="flex flex-col gap-5">
         <h3 className="mt-5 line-clamp-2 inline-block font-bold text-xl text-black duration-300 hover:text-primary dark:text-white dark:hover:text-primary">
-          <Link href={`/blog/blog-details`}>
+          <Link href={`/news/articles`}>
             {`${title.slice(0, 40)}...`}
           </Link>
         </h3>
@@ -65,4 +65,4 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
   );
 };
 
-export default BlogItem;
+export default NewsItem;
