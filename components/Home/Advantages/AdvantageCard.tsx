@@ -11,7 +11,7 @@ const AdvantageCard = ({
                 {icon}
             </div>
             <div className="flex flex-col text-black">
-                <p className="text-2xl font-bold leading-tight">{title}</p>
+                <p className="text-2xl sm:text-xl font-bold leading-tight">{title}</p>
                 <p className="text-sm text-neutral-600">{description}</p>
             </div>
         </div>

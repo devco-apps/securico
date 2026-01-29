@@ -7,14 +7,14 @@ import AdvantageCard from "./AdvantageCard"
 
 const Advantages = () => {
     return (
-        <Section>
-            <div className="p-10 flex justify-center">
-                <p className='text-3xl font-bold text-primary md:text-4xl lg:text-6xl'>Our Advantage</p>
+        <Section className="px-4 py-10 md:px-8 lg:py-0">
+            <div className="mb-10 flex justify-center">
+                <p className='text-3xl font-bold text-center text-primary md:text-4xl lg:text-6xl'>Our Advantage</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                <div className="flex flex-col justify-center group relative transition-all duration-300 text-secondary text-2xl">
-                    <p className="font-bold" style={{ textAlign: "center" }}>
+                <div className="flex flex-col justify-center group relative transition-all duration-300 text-secondary text-2xl px-2 md:px-0">
+                    <p className="font-bold text-center">
                         We&apos;re your partners in safety. Our approach involves customizing solutions, blending on-site guards with cutting-edge technology, striking the perfect balance for enhanced security.
                     </p>
                 </div>
