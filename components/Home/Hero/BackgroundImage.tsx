@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import type { CurrentSlideData, Data } from '@/types/slide'
 
@@ -32,12 +32,18 @@ const BackgroundImage = ({ transitionData, currentSlideData }: Props) => {
 
             {/* Background Image */}
 
-            <motion.img
-                alt="Current Image"
-                key={currentSlideData.data.id + 'transition'}
-                src={currentSlideData.data.image}
-                className="absolute left-0 top-0 w-full h-full object-cover brightness-50"
-            />
+            <AnimatePresence mode="popLayout">
+                <motion.img
+                    alt="Current Image"
+                    key={currentSlideData.data.id + 'bg'}
+                    src={currentSlideData.data.image}
+                    className="absolute left-0 top-0 w-full h-full object-cover brightness-50 z-0"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                />
+            </AnimatePresence>
         </>
     )
 }

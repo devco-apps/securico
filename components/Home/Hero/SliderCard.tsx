@@ -25,6 +25,9 @@ export const SliderCard = ({ data }: Props) => {
                 damping: 20,
                 stiffness: 100
             }}
+            style={{
+                willChange: "transform, opacity"
+            }}
         >
             <motion.img
                 layoutId={data.id}

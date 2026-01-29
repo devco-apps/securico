@@ -53,6 +53,19 @@ const MainSlider = () => {
         return () => clearInterval(interval);
     }, [handleNext]);
 
+    // Preload images
+    useEffect(() => {
+        const preloadImages = () => {
+            sliderData.forEach((slide) => {
+                const img = new Image();
+                img.src = slide.image;
+                const thumb = new Image();
+                thumb.src = slide.thumbnail;
+            });
+        };
+        preloadImages();
+    }, []);
+
 
     return (
         <section
