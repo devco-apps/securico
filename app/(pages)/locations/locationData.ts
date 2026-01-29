@@ -25,7 +25,7 @@ export const locations: Location[] = [
     name: "Bulawayo Office",
     address: "224 Clark Road Suburbs Bulawayo",
     email: "info@securico.co.zw",
-    phone: ["+263 292 230 803/4", "263 867 700 6217", "+263 242 621 956/7"],
+    phone: ["+263 292 230 803/4", "+263 867 700 6217", "+263 242 621 956/7"],
     googleMapsLink:
       "https://www.google.com/maps/dir//Securico,+224+A6,+Bulawayo/@-20.1581557,26.2949977,8z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1eb5546ab3e71dcb:0xd12962022d4ad91b!2m2!1d28.6021266!2d-20.1581557?entry=ttu",
     lat: -20.1581557,

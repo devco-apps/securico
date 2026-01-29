@@ -27,7 +27,10 @@ interface Branch {
     name: string;
     lat: number;
     lng: number;
-    city: string;
+    address: string;
+    email: string;
+    phone: string[];
+    googleMapsLink: string;
 }
 
 interface MapProps {
@@ -64,10 +67,45 @@ const LeafletMap = ({ center, zoom, branches }: MapProps) => {
                     position={[branch.lat, branch.lng]}
                     icon={customIcon}
                 >
-                    <Popup>
-                        <div className="text-center">
-                            <h3 className="font-bold text-lg">{branch.name}</h3>
-                            <p className="text-sm text-gray-600">{branch.city}</p>
+                    <Popup className="min-w-[250px]">
+                        <div className="p-2">
+                            <h3 className="font-bold text-lg mb-0">{branch.name}</h3>
+
+                            <div className="mb-0">
+                                {/* <p className="text-sm font-semibold text-gray-700">Address:</p> */}
+                                <p className="text-sm text-gray-600">{branch.address}</p>
+                            </div>
+
+                            {branch.email && (
+                                <div className="mb-2">
+                                    {/* <p className="text-sm font-semibold text-gray-700">Email:</p> */}
+                                    <a href={`mailto:${branch.email}`} className="text-sm text-blue-600 hover:underline">
+                                        {branch.email}
+                                    </a>
+                                </div>
+                            )}
+
+                            {branch.phone && branch.phone.length > 0 && (
+                                <div className="mb-3">
+                                    {/* <p className="text-sm font-semibold text-gray-700">Phone:</p> */}
+                                    <div className="flex flex-col">
+                                        {branch.phone.map((phone, i) => (
+                                            <a key={i} href={`tel:${phone.replace(/\s/g, '')}`} className="text-sm text-blue-600 hover:underline">
+                                                {phone}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            <a
+                                href={branch.googleMapsLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block w-full text-center  bg-secondary text-sm font-medium py-2 px-4 rounded hover:bg-primary transition-colors"
+                            >
+                                <span className="text-white">Get Directions</span>
+                            </a>
                         </div>
                     </Popup>
                 </Marker>
