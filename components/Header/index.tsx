@@ -234,11 +234,11 @@ const Header = () => {
             {/* Nav Menu */}
             <div
               className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
-                "navbar visible! absolute top-16 left-0 w-full bg-primary p-7.5 shadow-solid-5 dark:bg-secondary h-[calc(100vh-80px)] overflow-y-auto xl:static xl:h-auto xl:max-h-none xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+                "navbar visible! absolute top-full left-0 w-full bg-primary p-4 shadow-solid-5 dark:bg-secondary h-[calc(100vh-80px)] overflow-y-auto xl:static xl:h-auto xl:max-h-none xl:p-0 xl:shadow-none xl:dark:bg-transparent"
                 }`}
             >
               <nav>
-                <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+                <ul className="flex flex-col gap-3.5 xl:flex-row xl:items-center xl:gap-10">
                   {menuData.map((menuItem, key) => {
                     const isActive = pathUrl === menuItem.path;
 
@@ -298,7 +298,7 @@ const Header = () => {
               </nav>
 
               {/* Right Side Actions */}
-              <div className="mt-7 flex items-center gap-6 xl:mt-0">
+              <div className="mt-4 flex items-center gap-6 xl:mt-0">
                 {/* <ThemeToggler /> */}
                 {/* Call to action button */}
 
