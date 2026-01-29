@@ -18,6 +18,8 @@ export const breadcrumbs = {
     '/resources/tenders': { name: 'Tenders', parent: '/resources' },
     '/resources/supplier-registration': { name: 'Supplier Registration', parent: '/resources' },
     '/resources/careers': { name: 'Careers', parent: '/resources' },
+    '/news': { name: 'News' },
+    '/news/articles': { name: 'Article Details', parent: '/news' },
     '/contact': { name: 'Contact Us' },
 };
 

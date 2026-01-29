@@ -2,6 +2,7 @@ import RelatedArticles from "@/components/News/RelatedArticles";
 import ShareArticle from "@/components/News/ShareArticle";
 import { Metadata } from "next";
 import Image from "next/image";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Article Details Page - Solid SaaS Boilerplate",
@@ -13,11 +14,16 @@ export const metadata: Metadata = {
 const ArticlePage = async () => {
   return (
     <>
-      <section className="pb-20 pt-35 lg:pb-25 lg:pt-45 xl:pb-30 xl:pt-50">
+      <Breadcrumb title="News Details" />
+
+      <section className="pb-20 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex flex-col-reverse gap-7.5 lg:flex-row xl:gap-12.5">
             <div className="md:w-1/2 lg:w-[32%]">
-              <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-3.5 shadow-solid-13 dark:border-strokedark dark:bg-secondary">
+              <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-secondary">
+                <h4 className="mb-7.5 text-2xl font-semibold text-black dark:text-white">
+                  Search
+                </h4>
                 <form
                   action="https://formbold.com/s/unique_form_id"
                   method="POST"

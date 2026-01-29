@@ -16,4 +16,6 @@ export type News = {
   author?: Author;
   tags?: string[];
   publishedAt?: string;
+  category?: string;
+  trending?: boolean;
 };
