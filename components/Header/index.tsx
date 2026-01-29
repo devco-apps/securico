@@ -234,7 +234,7 @@ const Header = () => {
             {/* Nav Menu */}
             <div
               className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
-                "navbar visible! absolute top-full left-0 w-full bg-primary p-4 shadow-solid-5 dark:bg-secondary h-[calc(100vh-80px)] overflow-y-auto xl:static xl:h-auto xl:max-h-none xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+                "navbar visible! absolute top-16 left-0 w-full bg-primary p-4 shadow-solid-5 dark:bg-secondary h-[calc(100vh-80px)] overflow-y-auto xl:static xl:h-auto xl:max-h-none xl:p-0 xl:shadow-none xl:dark:bg-transparent"
                 }`}
             >
               <nav>
