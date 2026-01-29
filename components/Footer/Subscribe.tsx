@@ -5,7 +5,7 @@ const Subscribe = () => {
 
     return (
         <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-8 w-full md:w-3/4 xl:w-1/2">
-            <p className="text-sm text-center xl:text-left">Subscribe for the latest news. Stay updated on the latest trends.</p>
+            <p className="text-sm text-start sm:text-center xl:text-left">Subscribe for the latest news. Stay updated on the latest trends.</p>
 
             <form action="#" className="w-full">
                 <div className="relative w-full max-w-[440px] mx-auto xl:mx-0">
