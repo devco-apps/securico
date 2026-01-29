@@ -19,9 +19,9 @@ interface Props {
 const paddingMap: Record<PaddingSize, Record<string, string>> = {
   xs: { p: "p-2", px: "px-2", py: "py-2", pt: "pt-2", pb: "pb-2", pl: "pl-2", pr: "pr-2" },
   sm: { p: "p-4", px: "px-4", py: "py-4", pt: "pt-4", pb: "pb-4", pl: "pl-4", pr: "pr-4" },
-  md: { p: "p-8", px: "px-8", py: "py-8", pt: "pt-8", pb: "pb-8", pl: "pl-8", pr: "pr-8" },
-  lg: { p: "p-18", px: "px-18", py: "py-18", pt: "pt-18", pb: "pb-18", pl: "pl-18", pr: "pr-18" },
-  xl: { p: "p-32", px: "px-32", py: "py-32", pt: "pt-32", pb: "pb-32", pl: "pl-32", pr: "pr-32" },
+  md: { p: "p-6 md:p-8", px: "px-6 md:px-8", py: "py-6 md:py-8", pt: "pt-6 md:pt-8", pb: "pb-6 md:pb-8", pl: "pl-6 md:pl-8", pr: "pr-6 md:pr-8" },
+  lg: { p: "p-8 md:p-12 lg:p-18", px: "px-8 md:px-12 lg:px-18", py: "py-8 md:py-12 lg:py-18", pt: "pt-8 md:pt-12 lg:pt-18", pb: "pb-8 md:pb-12 lg:pb-18", pl: "pl-8 md:pl-12 lg:pl-18", pr: "pr-8 md:pr-12 lg:pr-18" },
+  xl: { p: "p-4 md:p-16 xl:p-32", px: "px-4 md:px-16 xl:px-32", py: "py-10 md:py-20 xl:py-32", pt: "pt-10 md:pt-20 xl:pt-32", pb: "pb-10 md:pb-20 xl:pb-32", pl: "pl-4 md:pl-16 xl:pl-32", pr: "pr-4 md:pr-16 xl:pr-32" },
 };
 
 /**

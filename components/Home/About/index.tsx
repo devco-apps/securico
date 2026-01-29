@@ -1,14 +1,15 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-// import Section from '../common/Section';
-import Section from '@components/Common/Section'
-import { IoIosArrowForward, IoIosCheckmarkCircle, IoIosLocate, IoIosMap, IoIosPin } from 'react-icons/io';
 import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { IoIosArrowForward, IoIosPin } from 'react-icons/io';
+
+import Section from '@components/Common/Section'
+
 const About = () => {
   return (
-    <Section variant="contained" className="overflow-visible" p="xl">
+    <Section variant="contained" className="overflow-visible py-16 px-4 md:px-8 md:py-20 lg:py-28 xl:p-32">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <motion.div
           variants={{
@@ -19,7 +20,7 @@ const About = () => {
           whileInView="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
-          className="animate_left relative mx-auto lg:mr-0"
+          className="animate_left relative mx-auto mb-16 lg:mb-0 lg:mr-0"
         >
           <div className="flex gap-6">
             <div className="aspect-[550/720]">

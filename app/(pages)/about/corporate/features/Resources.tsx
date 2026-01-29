@@ -46,7 +46,7 @@ const Resources = () => {
     return (
         <Section variant="contained">
             <div className="flex justify-center">
-                <div className="max-w-2xl p-10">
+                <div className="max-w-2xl p-4 md:p-10">
                     <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
                         Company Resources
                     </h2>

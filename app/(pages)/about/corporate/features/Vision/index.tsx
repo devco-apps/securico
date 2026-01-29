@@ -35,7 +35,7 @@ export default function Vision() {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                     <div
-                        className="group relative bg-primary text-white p-10 border border-gray-100 transition-all duration-300 h-[400px]"
+                        className="group relative bg-primary text-white p-6 md:p-10 border border-gray-100 transition-all duration-300 h-auto md:h-[400px]"
                     >
                         <div className="mb-16 max-w-lg">
                             <div className="flex items-center gap-2 mb-4">
@@ -52,7 +52,7 @@ export default function Vision() {
                     {data.map(({ id, icon, title, description }) => (
                         <div
                             key={id}
-                            className="group relative bg-white p-10 border border-gray-100 transition-all duration-300 hover:border-orange-500 hover:z-10 h-[400px] flex flex-col hover:shadow-2xl"
+                            className="group relative bg-white p-6 md:p-10 border border-gray-100 transition-all duration-300 hover:border-orange-500 hover:z-10 h-auto md:h-[400px] flex flex-col hover:shadow-2xl"
                         >
                             {/* Vertical ID Text */}
                             <span className="absolute left-9 bottom-[17%] -rotate-90 origin-left text-gray-200 font-bold tracking-tighter text-4xl uppercase opacity-50 group-hover:text-orange-100">

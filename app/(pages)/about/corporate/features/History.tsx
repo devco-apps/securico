@@ -16,7 +16,7 @@ const History = () => {
                         objectFit="cover"
                     />
                 </div>
-                <div className="p-10">
+                <div className="p-4 md:p-10">
                     <h2 className="text-3xl font-bold mb-4">Our History</h2>
 
                     <div className="flex flex-col gap-4 text-lg">
