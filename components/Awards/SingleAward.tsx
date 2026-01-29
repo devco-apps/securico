@@ -27,7 +27,7 @@ const SingleAward = ({ award }: { award: Award }) => {
         transition={{ duration: 1, delay: id }}
         viewport={{ once: true }}
         href={href}
-        className="animate_top mx-w-full relative block min-h-72 w-[100%]"
+        className="animate_top relative block h-40 w-full max-w-full"
       >
         <Image
           className="object-contain transition-all duration-300"

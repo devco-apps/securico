@@ -38,13 +38,13 @@ const Awards = ({ backgroundColor = "white" }: AwardsProps) => {
           Our Achievements & Awards
         </h2>
 
-        <p className="text-3xl mx-auto leading-relaxed text-body-color dark:text-body-color-dark">
+        <p className="text-lg sm:text-3xl px-8 mx-auto leading-relaxed text-body-color dark:text-body-color-dark">
           Recognized for excellence and innovation in our field
         </p>
       </div>
 
       <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
-        <div className="grid grid-cols-2 items-center justify-center gap-7.5 md:grid-cols-6 lg:gap-1.5 xl:gap-6">
+        <div className="grid grid-cols-2 items-center justify-center gap-6 md:grid-cols-3 md:gap-8 lg:grid-cols-6 xl:gap-8">
           {awardData.map((award, key) => (
             <SingleAward award={award} key={key} />
           ))}
