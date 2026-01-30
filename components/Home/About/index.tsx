@@ -123,7 +123,7 @@ const About = () => {
                 <p className="text-xs text-black dark:text-white">
                   Learn about our company.
                 </p>
-                <Link href="#" className="text-primary hover:text-secondary text-xs">Read More</Link>
+                <Link href="/about/corporate" className="text-primary hover:text-secondary text-xs">Read More</Link>
               </div>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-md dark:bg-blacksection">
@@ -134,13 +134,13 @@ const About = () => {
                 <p className="text-xs text-black dark:text-white">
                   The board directing the company.
                 </p>
-                <Link href="#" className="text-primary hover:text-secondary text-xs">Read More</Link>
+                <Link href="/about/leadership" className="text-primary hover:text-secondary text-xs">Read More</Link>
               </div>
             </div>
           </div>
 
           <Link
-            href="#"
+            href="/locations"
             className="mt-10 flex w-fit items-center rounded-md bg-secondary px-5 py-3 text-white hover:bg-opacity-90"
           >
             <IoIosPin className='inline-block mr-2 text-xl' />
