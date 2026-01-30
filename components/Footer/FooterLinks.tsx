@@ -18,50 +18,50 @@ const usefulLinks1: Link[] = [
     },
     {
         label: "About",
-        path: "about",
+        path: "/about",
     },
     {
         label: "Services",
-        path: "services",
+        path: "/services",
     },
     {
         label: "Locations",
-        path: "locations",
+        path: "/locations",
     },
     {
         label: "FAQs",
-        path: "faqs",
+        path: "/faqs",
     },
     {
         label: "News & Updates",
-        path: "news-updates",
+        path: "/news",
     },
     {
         label: "Contact",
-        path: "contact",
+        path: "/contact",
     }
 ]
 
 const usefulLinks2: Link[] = [
     {
         label: "Verification",
-        path: "verification",
+        path: "/resources/verification",
     },
     {
         label: "Downloads",
-        path: "downloads",
+        path: "/resources/downloads",
     },
     {
         label: "Tenders",
-        path: "tenders",
+        path: "/resources/tenders",
     },
     {
         label: "Supplier Registration",
-        path: "supplier-registration",
+        path: "/resources/supplier-registration",
     },
     {
         label: "Careers",
-        path: "careers",
+        path: "/resources/careers",
     }
 ]
 
@@ -154,7 +154,7 @@ const FooterLinks = () => {
                             {usefulLinks1.map((link, i) => (
                                 <li key={`${link.label} ${i}`}>
                                     <a
-                                        href="#"
+                                        href={link.path}
                                         className="mb-3 inline-block hover:text-primary text-sm"
                                     >
                                         {link.label}
@@ -167,7 +167,7 @@ const FooterLinks = () => {
                             {usefulLinks2.map((link, i) => (
                                 <li key={`${link.label} ${i}`}>
                                     <a
-                                        href="#"
+                                        href={link.path}
                                         className="mb-3 inline-block hover:text-primary text-sm"
                                     >
                                         {link.label}
