@@ -28,14 +28,14 @@ const ContactPage = () => {
         <div>
             <Breadcrumb title="Get In Touch" />
 
-            <Section py="lg" className="overflow-hidden">
+            <Section py="lg" px="md" className="overflow-hidden">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
 
                     {/* Left Column: Contact Info */}
                     <div className="w-full lg:w-1/3 flex flex-col gap-8">
                         {/* Intro Text */}
                         <div>
-                            <h2 className="mb-4 text-3xl font-bold text-black dark:text-white">
+                            <h2 className="mb-4 text-2xl font-bold text-black dark:text-white md:text-3xl">
                                 Contact Us
                             </h2>
                             <p className="text-body-color dark:text-body-color-dark mb-6">
@@ -114,8 +114,8 @@ const ContactPage = () => {
 
                     {/* Right Column: Form */}
                     <div className="w-full lg:w-2/3">
-                        <div className="rounded-lg border border-stroke bg-white p-8 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
-                            <h3 className="mb-2 text-2xl font-semibold text-black dark:text-white">
+                        <div className="rounded-lg border border-stroke bg-white p-4 shadow-solid-13 dark:border-strokedark dark:bg-blacksection md:p-8">
+                            <h3 className="mb-2 text-xl font-semibold text-black dark:text-white md:text-2xl">
                                 Send us a message
                             </h3>
                             <p className="mb-6 text-sm text-body-color">
@@ -158,8 +158,8 @@ const ContactPage = () => {
                                 >
                                     {({ isSubmitting, touched, errors }) => (
                                         <Form>
-                                            <div className="mb-4 flex flex-col gap-6 xl:flex-row">
-                                                <div className="w-full xl:w-1/2">
+                                            <div className="mb-4 flex flex-col gap-6 md:flex-row">
+                                                <div className="w-full md:w-1/2">
                                                     <label className="mb-2.5 block text-black dark:text-white">
                                                         Full Name
                                                     </label>
@@ -172,7 +172,7 @@ const ContactPage = () => {
                                                     />
                                                     <ErrorMessage name="fullName" component="div" className="mt-1 text-sm text-red-500" />
                                                 </div>
-                                                <div className="w-full xl:w-1/2">
+                                                <div className="w-full md:w-1/2">
                                                     <label className="mb-2.5 block text-black dark:text-white">
                                                         Category of Feedback
                                                     </label>
@@ -212,8 +212,8 @@ const ContactPage = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="mb-4 flex flex-col gap-6 xl:flex-row">
-                                                <div className="w-full xl:w-1/2">
+                                            <div className="mb-4 flex flex-col gap-6 md:flex-row">
+                                                <div className="w-full md:w-1/2">
                                                     <label className="mb-2.5 block text-black dark:text-white">
                                                         Email Address
                                                     </label>
@@ -226,7 +226,7 @@ const ContactPage = () => {
                                                     />
                                                     <ErrorMessage name="email" component="div" className="mt-1 text-sm text-red-500" />
                                                 </div>
-                                                <div className="w-full xl:w-1/2">
+                                                <div className="w-full md:w-1/2">
                                                     <label className="mb-2.5 block text-black dark:text-white">
                                                         Phone Number
                                                     </label>
