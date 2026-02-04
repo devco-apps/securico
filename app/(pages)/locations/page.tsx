@@ -38,18 +38,30 @@ const LocationsPage = () => {
     });
   }, []);
 
-  const [selectedCity, setSelectedCity] = useState<City>(cities[0]);
-  const [zoom, setZoom] = useState<number>(12);
+  const [selectedCity, setSelectedCity] = useState<City | null>(null);
+  const [zoom, setZoom] = useState<number>(7);
 
-  // Filter branches based on selected city
-  const filteredBranches = locations.filter(
-    (branch) => branch.city === selectedCity.name
-  );
+  // Filter branches based on selected city, or show all if no city selected
+  const filteredBranches = selectedCity
+    ? locations.filter((branch) => branch.city === selectedCity.name)
+    : locations;
 
   const handleCityClick = (city: City) => {
     setSelectedCity(city);
     setZoom(13); // Zoom in when a city is selected
   };
+
+  const handleResetMap = () => {
+    setSelectedCity(null);
+    setZoom(7);
+  };
+
+  // Center of Zimbabwe for initial view
+  const defaultCenter: [number, number] = [-19.0154, 29.1549];
+
+  const mapCenter: [number, number] = selectedCity
+    ? [selectedCity.lat, selectedCity.lng]
+    : defaultCenter;
 
   return (
     <div>
@@ -70,14 +82,14 @@ const LocationsPage = () => {
                     <li key={city.name}>
                       <button
                         onClick={() => handleCityClick(city)}
-                        className={`w-full text-left px-4 py-3 rounded-md transition-all duration-300 flex justify-between items-center ${selectedCity.name === city.name
+                        className={`w-full text-left px-4 py-3 rounded-md transition-all duration-300 flex justify-between items-center ${selectedCity?.name === city.name
                           ? "bg-primary text-white shadow-md"
                           : "bg-gray-100 dark:bg-dark-2 text-waterloo dark:text-manatee hover:bg-gray-200 dark:hover:bg-dark-3"
                           }`}
                       >
                         <span className="font-medium">{city.name}</span>
 
-                        {selectedCity.name === city.name && (
+                        {selectedCity?.name === city.name && (
                           <span className="text-sm">📍</span>
                         )}
                       </button>
@@ -88,19 +100,28 @@ const LocationsPage = () => {
 
               <div className="mt-6 bg-white dark:bg-dark shadow-solid-3 rounded-sm p-6">
                 <h4 className="font-bold text-black dark:text-white mb-2">
-                  {selectedCity.name}
+                  {selectedCity ? selectedCity.name : "All Locations"}
                 </h4>
                 <p className="text-sm text-waterloo dark:text-manatee">
-                  Showing {filteredBranches.length} branch{filteredBranches.length !== 1 ? 'es' : ''} in this area.
+                  Showing {filteredBranches.length} branch{filteredBranches.length !== 1 ? 'es' : ''} {selectedCity ? 'in this area' : 'across Zimbabwe'}.
                 </p>
               </div>
             </div>
 
             {/* Map Area */}
             <div className="w-full lg:w-2/3 xl:w-3/4">
+              <div className="flex justify-end mb-4">
+                <button
+                  onClick={handleResetMap}
+                  className="px-6 py-2 rounded-md bg-primary text-white font-medium hover:bg-opacity-90 transition-all shadow-md flex items-center gap-2"
+                >
+                  <span>🔄</span> Reset Map
+                </button>
+              </div>
+
               <div className="h-[500px] w-full rounded-lg overflow-hidden shadow-solid-3 border border-gray-200 dark:border-dark-3 relative z-0">
                 <LeafletMap
-                  center={[selectedCity.lat, selectedCity.lng]}
+                  center={mapCenter}
                   zoom={zoom}
                   branches={filteredBranches}
                 />
